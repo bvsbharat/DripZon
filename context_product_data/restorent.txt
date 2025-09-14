@@ -1,0 +1,787 @@
+export const restaurants: Restaurant[] = [
+
+{
+
+id: 'olive-garden',
+
+name: 'Olive Garden',
+
+cuisine: 'American/Bakery',
+
+description: '#1 Most Liked - Famous San Francisco sourdough bakery serving fresh bread, sandwiches, and classic American fare',
+
+image: 'https://api.time.com/wp-content/uploads/2014/03/darden-outlook_stam.jpg',
+
+rating: 4.5,
+
+deliveryTime: '37 min',
+
+distance: '4.0 mi',
+
+categories: ['Appetizers', 'Entrees', 'Side Dishes', 'Desserts', 'Beverages'],
+
+address: 'San Francisco, CA'
+
+},
+
+{
+
+id: 'boudin-bakery',
+
+name: 'Boudin Bakery',
+
+cuisine: 'American/Bakery',
+
+description: '#1 Most Liked - Famous San Francisco sourdough bakery serving fresh bread, sandwiches, and classic American fare',
+
+image: 'https://ancona-a.com/wp-content/uploads/Boudin_BakeryBrand_Orig.png',
+
+rating: 4.5,
+
+deliveryTime: '37 min',
+
+distance: '4.0 mi',
+
+categories: ['Appetizers', 'Entrees', 'Side Dishes', 'Desserts', 'Beverages'],
+
+address: 'San Francisco, CA'
+
+}
+
+];
+
+export const restaurantMenuItems: Product[] = [
+
+// Boudin Bakery - Appetizers
+
+{
+
+id: 'boudin-app-1',
+
+name: 'Pick a Pair',
+
+price: 12.95,
+
+image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400',
+
+category: 'Appetizers',
+
+rating: 4.8,
+
+inStock: true,
+
+description: '#1 Most Liked - Choose any two items: soup, salad, or half sandwich with famous sourdough bread',
+
+designer: 'Boudin Bakery',
+
+keyWords: ['pick a pair', 'sourdough', 'soup', 'salad', 'sandwich']
+
+},
+
+{
+
+id: 'boudin-app-2',
+
+name: 'Clam Chowder Bread Bowl',
+
+price: 14.50,
+
+image: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?w=1200&q=80',
+
+category: 'Appetizers',
+
+rating: 4.7,
+
+inStock: true,
+
+description: 'Famous San Francisco clam chowder served in a fresh sourdough bread bowl',
+
+designer: 'Boudin Bakery',
+
+keyWords: ['clam chowder', 'bread bowl', 'sourdough', 'san francisco']
+
+},
+
+{
+
+id: 'boudin-app-3',
+
+name: 'Sourdough Starter',
+
+price: 8.95,
+
+image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400',
+
+category: 'Appetizers',
+
+rating: 4.6,
+
+inStock: true,
+
+description: 'Fresh sourdough bread with butter and jam, perfect for sharing',
+
+designer: 'Boudin Bakery',
+
+keyWords: ['sourdough starter', 'bread', 'butter', 'jam']
+
+},
+
+{
+
+id: 'boudin-app-4',
+
+name: 'Caesar Salad',
+
+price: 11.25,
+
+image: 'https://images.unsplash.com/photo-1546793665-c74683f339c1?w=1200&q=80',
+
+category: 'Appetizers',
+
+rating: 4.5,
+
+inStock: true,
+
+description: 'Crisp romaine lettuce with parmesan, croutons, and classic caesar dressing',
+
+designer: 'Boudin Bakery',
+
+keyWords: ['caesar salad', 'romaine', 'parmesan', 'croutons']
+
+},
+
+{
+
+id: 'boudin-app-5',
+
+name: 'Tomato Basil Soup',
+
+price: 9.50,
+
+image: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?w=400',
+
+category: 'Appetizers',
+
+rating: 4.4,
+
+inStock: true,
+
+description: 'Rich and creamy tomato basil soup made with fresh ingredients',
+
+designer: 'Boudin Bakery',
+
+keyWords: ['tomato basil soup', 'creamy', 'fresh ingredients', 'comfort food']
+
+},
+
+// Olive Garden - Appetizers
+
+{
+
+id: 'app-1',
+
+name: 'Fried Mozzarella',
+
+price: 10.49,
+
+image: 'https://media.olivegarden.com/en_us/images/product/Fried-Mozzarella-dpv-1180X730.jpg',
+
+category: 'Appetizers',
+
+rating: 4.5,
+
+inStock: true,
+
+description: 'Golden fried mozzarella cheese served with marinara sauce',
+
+designer: 'Olive Garden',
+
+keyWords: ['mozzarella', 'fried', 'cheese', 'marinara']
+
+},
+
+{
+
+id: 'app-2',
+
+name: 'Stuffed Ziti Fritta',
+
+price: 10.99,
+
+image: 'https://media.olivegarden.com/en_us/images/product/stuffed-ziti-fritta-appetizer-dpv-590x365.jpg',
+
+category: 'Appetizers',
+
+rating: 4.7,
+
+inStock: true,
+
+description: 'Crispy fried ziti stuffed with five cheeses, served with marinara',
+
+designer: 'Olive Garden',
+
+keyWords: ['ziti', 'fried', 'cheese', 'pasta']
+
+},
+
+{
+
+id: 'app-3',
+
+name: 'Calamari',
+
+price: 14.29,
+
+image: 'https://media.olivegarden.com/en_us/images/product/calamari-dpv-590x365.jpg',
+
+category: 'Appetizers',
+
+rating: 4.6,
+
+inStock: true,
+
+description: 'Lightly fried calamari served with marinara and spicy ranch',
+
+designer: 'Olive Garden',
+
+keyWords: ['seafood', 'fried', 'calamari', 'squid']
+
+},
+
+{
+
+id: 'app-4',
+
+name: 'Spinach-Artichoke Dip',
+
+price: 12.49,
+
+image: 'https://media.olivegarden.com/en_us/images/product/Spinach-Artichoke-Dip-dpv-1180x730.jpg',
+
+category: 'Appetizers',
+
+rating: 4.8,
+
+inStock: true,
+
+description: 'Creamy spinach and artichoke dip served with crispy flatbread',
+
+designer: 'Olive Garden',
+
+keyWords: ['spinach', 'artichoke', 'dip', 'vegetarian']
+
+},
+
+{
+
+id: 'app-5',
+
+name: 'Lasagna Fritta',
+
+price: 12.99,
+
+image: 'https://media.olivegarden.com/en_us/images/product/Lasagna-Fritta-dpv-1180x730.jpg',
+
+category: 'Appetizers',
+
+rating: 4.7,
+
+inStock: true,
+
+description: 'Fried lasagna pieces topped with parmesan and marinara',
+
+designer: 'Olive Garden',
+
+keyWords: ['lasagna', 'fried', 'pasta', 'italian']
+
+},
+
+// Olive Garden - Entrees
+
+{
+
+id: 'ent-1',
+
+name: 'Chicken Alfredo',
+
+price: 23.49,
+
+image: 'https://media.olivegarden.com/en_us/images/product/classic-chicken-alfredo-dinner-dpv-590x365.jpg',
+
+category: 'Entrees',
+
+rating: 4.8,
+
+inStock: true,
+
+description: 'Grilled chicken atop fettuccine tossed with creamy alfredo sauce',
+
+designer: 'Olive Garden',
+
+keyWords: ['chicken', 'alfredo', 'pasta', 'creamy']
+
+},
+
+{
+
+id: 'ent-2',
+
+name: 'Tour of Italy',
+
+price: 26.29,
+
+image: 'https://media.olivegarden.com/en_us/images/product/Tour-of-Italy-gv-590X365.jpg',
+
+category: 'Entrees',
+
+rating: 4.9,
+
+inStock: true,
+
+description: 'Combination of chicken parmigiana, lasagna, and fettuccine alfredo',
+
+designer: 'Olive Garden',
+
+keyWords: ['sampler', 'italian', 'combination', 'best seller']
+
+},
+
+{
+
+id: 'ent-3',
+
+name: 'Shrimp Scampi',
+
+price: 23.79,
+
+image: 'https://media.olivegarden.com/en_us/images/marketing/Shrimp-Scampi-Dinner-gv-590x365.jpg',
+
+category: 'Entrees',
+
+rating: 4.7,
+
+inStock: true,
+
+description: 'Garlicky shrimp sautéed with bell peppers and onions over angel hair',
+
+designer: 'Olive Garden',
+
+keyWords: ['shrimp', 'scampi', 'seafood', 'garlic']
+
+},
+
+{
+
+id: 'ent-4',
+
+name: 'Chicken Parmigiana',
+
+price: 22.99,
+
+image: 'https://media.olivegarden.com/en_us/images/product/dinner-chicken-parm-dpv-590x365.jpg',
+
+category: 'Entrees',
+
+rating: 4.6,
+
+inStock: true,
+
+description: 'Breaded chicken topped with marinara and melted cheeses',
+
+designer: 'Olive Garden',
+
+keyWords: ['chicken', 'parmesan', 'italian', 'breaded']
+
+},
+
+{
+
+id: 'ent-5',
+
+name: 'Five Cheese Ziti al Forno',
+
+price: 19.99,
+
+image: 'https://media.olivegarden.com/en_us/images/product/classic-five-cheese-ziti-al-forno-dpv-590x365.jpg',
+
+category: 'Entrees',
+
+rating: 4.5,
+
+inStock: true,
+
+description: 'Ziti pasta baked with five cheeses and marinara sauce',
+
+designer: 'Olive Garden',
+
+keyWords: ['baked', 'ziti', 'cheese', 'vegetarian']
+
+},
+
+// Olive Garden Desserts
+
+{
+
+id: 'des-1',
+
+name: 'Tiramisu',
+
+price: 10.49,
+
+image: 'https://media.olivegarden.com/en_us/images/marketing/Tiramisu-gv-590x365.jpg',
+
+category: 'Desserts',
+
+rating: 4.9,
+
+inStock: true,
+
+description: 'Classic Italian dessert with layers of coffee-soaked ladyfingers',
+
+designer: 'Olive Garden',
+
+keyWords: ['tiramisu', 'coffee', 'dessert', 'italian']
+
+},
+
+{
+
+id: 'des-2',
+
+name: 'Chocolate Lasagna',
+
+price: 10.79,
+
+image: 'https://media.olivegarden.com/en_us/images/marketing/Chocolate_Lasagna_590X365.jpg',
+
+category: 'Desserts',
+
+rating: 4.8,
+
+inStock: true,
+
+description: 'Layers of chocolate pastry cream, whipped topping and cookie crumbles',
+
+designer: 'Olive Garden',
+
+keyWords: ['chocolate', 'lasagna', 'dessert', 'layered']
+
+},
+
+{
+
+id: 'des-3',
+
+name: 'Black Tie Mousse Cake',
+
+price: 10.99,
+
+image: 'https://media.olivegarden.com/en_us/images/product/black-tie-mousse-cake-dpv-590x365.jpg',
+
+category: 'Desserts',
+
+rating: 4.7,
+
+inStock: true,
+
+description: 'Layers of chocolate cake and creamy mousse with chocolate shavings',
+
+designer: 'Olive Garden',
+
+keyWords: ['chocolate', 'mousse', 'cake', 'decadent']
+
+},
+
+{
+
+id: 'des-4',
+
+name: 'Warm Italian Doughnuts',
+
+price: 9.99,
+
+image: 'https://media.olivegarden.com/en_us/images/marketing/Warm-Italian-Donuts-Chocolate-gv-590x365.jpg',
+
+category: 'Desserts',
+
+rating: 4.6,
+
+inStock: true,
+
+description: 'Freshly fried doughnuts dusted with cinnamon-sugar, served with chocolate sauce',
+
+designer: 'Olive Garden',
+
+keyWords: ['doughnuts', 'warm', 'cinnamon', 'fried']
+
+},
+
+{
+
+id: 'des-5',
+
+name: 'Sicilian Cheesecake',
+
+price: 10.49,
+
+image: 'https://media.olivegarden.com/en_us/images/marketing/Strawberry-Cheesecake-gv-590x365.jpg',
+
+category: 'Desserts',
+
+rating: 4.5,
+
+inStock: true,
+
+description: 'Creamy cheesecake with strawberry topping and whipped cream',
+
+designer: 'Olive Garden',
+
+keyWords: ['cheesecake', 'strawberry', 'creamy', 'italian']
+
+},
+
+// Olive Garden Side
+
+{
+
+id: 'side-1',
+
+name: 'Side of Meatballs',
+
+price: 4.49,
+
+image: 'https://media.olivegarden.com/en_us/images/marketing/Meatball-Side-gv-590X365.jpg',
+
+category: 'Sides & Sauces',
+
+rating: 4.3,
+
+inStock: true,
+
+description: 'Three hearty Italian-style meatballs with rich marinara sauce',
+
+designer: 'Olive Garden',
+
+keyWords: ['meatballs', 'italian', 'protein', 'side dish']
+
+},
+
+{
+
+id: 'side-2',
+
+name: 'Side of Grilled Chicken',
+
+price: 5.29,
+
+image: 'https://media.olivegarden.com/en_us/images/marketing/Grilled-Chicken-Side-gv-590X365.jpg',
+
+category: 'Sides & Sauces',
+
+rating: 4.5,
+
+inStock: true,
+
+description: 'Juicy grilled chicken breast strips, perfect for adding to pasta or salad',
+
+designer: 'Olive Garden',
+
+keyWords: ['chicken', 'grilled', 'protein', 'healthy']
+
+},
+
+{
+
+id: 'side-3',
+
+name: 'Side of Italian Sausage',
+
+price: 4.49,
+
+image: 'https://media.olivegarden.com/en_us/images/marketing/Italian-Sausage-Side-gv-590x365.jpg',
+
+category: 'Sides & Sauces',
+
+rating: 4.4,
+
+inStock: true,
+
+description: 'Two savory Italian sausage links with peppers and onions',
+
+designer: 'Olive Garden',
+
+keyWords: ['sausage', 'italian', 'spicy', 'protein']
+
+},
+
+{
+
+id: 'side-4',
+
+name: 'Side of Mashed Potatoes',
+
+price: 4.29,
+
+image: 'https://media.olivegarden.com/en_us/images/marketing/Kids-Mashed-Potatoes-gv-590x365.jpg',
+
+category: 'Sides & Sauces',
+
+rating: 4.2,
+
+inStock: true,
+
+description: 'Creamy mashed potatoes with garlic and parmesan',
+
+designer: 'Olive Garden',
+
+keyWords: ['potatoes', 'mashed', 'comfort food', 'vegetarian']
+
+},
+
+{
+
+id: 'side-5',
+
+name: 'Side of Broccoli',
+
+price: 4.29,
+
+image: 'https://media.olivegarden.com/en_us/images/marketing/Broccoli-Side-gv-590X365.jpg',
+
+category: 'Sides & Sauces',
+
+rating: 4.1,
+
+inStock: true,
+
+description: 'Fresh steamed broccoli with a light garlic butter sauce (Vegetarian)',
+
+designer: 'Olive Garden',
+
+keyWords: ['broccoli', 'vegetable', 'healthy', 'vegetarian']
+
+},
+
+// Olive Garden Beverages
+
+{
+
+id: 'bev-1',
+
+name: 'Gallon Iced Teas & Raspberry Lemonade',
+
+price: 6.79,
+
+image: 'https://media.olivegarden.com/en_us/images/product/d-Parties-to-Go-Bellini-Tea-Pitcher-dpv.jpg',
+
+category: 'Beverages',
+
+rating: 4.5,
+
+inStock: true,
+
+description: 'Refreshing gallon-sized iced tea options including peach-raspberry, mango-strawberry, and raspberry lemonade',
+
+designer: 'Olive Garden',
+
+keyWords: ['iced tea', 'gallon', 'lemonade', 'refreshing']
+
+},
+
+{
+
+id: 'bev-2',
+
+name: 'Raspberry Lemonade',
+
+price: 4.79,
+
+image: 'https://media.olivegarden.com/en_us/images/product/d-raspberry-lemonade-dpv.JPG',
+
+category: 'Beverages',
+
+rating: 4.7,
+
+inStock: true,
+
+description: 'Sweet and tangy raspberry-infused lemonade',
+
+designer: 'Olive Garden',
+
+keyWords: ['lemonade', 'raspberry', 'sweet', 'refreshing']
+
+},
+
+{
+
+id: 'bev-3',
+
+name: 'Mango-Strawberry Iced Tea',
+
+price: 4.79,
+
+image: 'https://media.olivegarden.com/en_us/images/product/mango-strawberry-tea-dpv-590x365.jpg',
+
+category: 'Beverages',
+
+rating: 4.6,
+
+inStock: true,
+
+description: 'Fruity blend of mango and strawberry flavors in fresh brewed iced tea',
+
+designer: 'Olive Garden',
+
+keyWords: ['iced tea', 'mango', 'strawberry', 'fruity']
+
+},
+
+{
+
+id: 'bev-4',
+
+name: 'Cappuccino',
+
+price: 5.79,
+
+image: 'https://media.olivegarden.com/en_us/images/product/d-cappuccino-with-whipped-cream-dpv.jpg',
+
+category: 'Beverages',
+
+rating: 4.4,
+
+inStock: true,
+
+description: 'Rich espresso topped with steamed milk and foam',
+
+designer: 'Olive Garden',
+
+keyWords: ['coffee', 'espresso', 'cappuccino', 'hot']
+
+},
+
+{
+
+id: 'bev-5',
+
+name: 'Lavazza Espresso',
+
+price: 4.79,
+
+image: 'https://media.olivegarden.com/en_us/images/marketing/Espresso-gv-590x365.jpg',
+
+category: 'Beverages',
+
+rating: 4.8,
+
+inStock: true,
+
+description: 'Authentic Italian espresso made with premium Lavazza beans',
+
+designer: 'Olive Garden',
+
+keyWords: ['espresso', 'coffee', 'italian', 'strong']
+
+}
+
+];

@@ -1,0 +1,6 @@
+{
+  "type": "module",
+  "name": "upload-scripts",
+  "version": "1.0.0",
+  "description": "Scripts for uploading data to Supabase"
+}
